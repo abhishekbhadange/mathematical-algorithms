@@ -2,8 +2,8 @@ package mathematicalAlgorithms;
 
 public class EffiPowerFunction {
 	public static void main(String[] args) {
-		int number = 9, base = 3;
-		System.out.println("Efficient Power computation result: " + effiPowerFunction(number, base));
+		int base = 9, exp = 3;
+		System.out.println("Efficient Power computation result: " + effiPowerFunction(base, exp));
 	}
 	public static long effiPowerFunction(int base, int exp) {
 		if(exp == 0)
