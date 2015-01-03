@@ -2,14 +2,16 @@ package mathematicalAlgorithms;
 
 public class PowerFunction {
 	public static void main(String[] args) {
-		int number = 8;
-		int power = 3;
+		int number = 5;
+		int power = 4;
 		System.out.println("Result: " + powerFunction(number, power));
 		System.out.println("Recursive result: " + recPower(number, power));
 	}
 	public static int powerFunction(int num, int pow) {
 		if(pow == 0)
 			return 1;
+		if(pow == 1)
+			return num;
 		int answer = num;
 		int increment = num;
 		for(int i = 1; i < pow; i++) {
@@ -23,6 +25,8 @@ public class PowerFunction {
 	public static int recPower(int num, int pow) {
 		if(pow == 0)
 			return 1;
+		else if(pow == 1)
+			return num;
 		else
 			return multiply(num, recPower(num, pow - 1));
 	}
